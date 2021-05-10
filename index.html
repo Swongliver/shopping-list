@@ -1,0 +1,45 @@
+
+<html>
+    <head>
+        
+        <title>Shopping List</title>
+        
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Shopping List </h1>
+        <input id="items" placeholder="Type shopping list item here">
+        <button id="add" onclick="add()">Click to add item</button>
+        <h2 id="list"></h2>
+        <button id="delete" onclick="remove()">Click to delete the last item</button>
+
+        
+        <script>
+            var list=[];
+            function add(){
+                var array_list="";
+      
+        var item=document.getElementById("items").value;
+    
+        list.push(item);
+                for(var i=0; i<list.length; i++){
+                    array_list=array_list + list [i] + "<br>";
+                } 
+    document.getElementById("list").innerHTML=array_list;
+    
+    
+    
+            }
+            function remove(){
+                var array_list="";
+            list.pop();
+            for(var i=0; i<list.length; i++){
+                    array_list=array_list + list [i] + "<br>";
+                } 
+            document.getElementById("list").innerHTML=array_list;
+                        }
+        
+
+        </script>
+    </body>
+</html>
